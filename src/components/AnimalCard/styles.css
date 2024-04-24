@@ -1,15 +1,15 @@
-.animal-card-wrapper{
+.animal-card-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    background-color: rgb(217, 180, 224);
+    border-radius: 4px;
     width: 300px;
     height: 300px;
     padding: 20px;
-    background-color: bisque;
-    border-radius: 5px;
-}
-
-.animal-card-wrapper > img{
+  }
+  
+  .animal-card-wrapper > img {
     width: 100px;
-}
+  }

@@ -3,39 +3,38 @@ import { useState } from "react";
 import "./styles.css";
 import Button from "../Button/Button";
 
-function Feedback() {
-
+function Feedback(): JSX.Element {
     const [like, setLike] = useState<number>(0);
     const [dislike, setDislike] = useState<number>(0);
 
-    const onLike = () => {
+    const addLike = (): void => {
         setLike((prevValue) => prevValue + 1);
-    }
-    const onDislike = () => {
+    };
+
+    const addDislike = (): void => {
         setDislike((prevValue) => prevValue + 1);
-    }
-    const resetResult = () => {
+    };
+
+    const resetResults = (): void => {
         setLike(0);
         setDislike(0);
-    }
+    };
 
     return (
-        <div className="feedback-wrapper">
-            <div className ="feedback-result-container">
-                <div className="like-block">
-                    <p>{like}</p>
-                    <Button name="like" onButtonClick={onLike} />
+        <div className="feedback-container">
+            <div className="feedback-result-container">
+                <div className="like-dislike-container">
+                    <Button name="Like" onButtonClick={addLike} />
+                    <div className="result">{like}</div>
                 </div>
-                <div className="dislike-block">
-                    <p>{dislike}</p>
-                    <Button name="dislike" onButtonClick={onDislike} />
+                <div className="like-dislike-container">
+                    <Button name="Dislike" onButtonClick={addDislike} />
+                    <div className="result">{dislike}</div>
                 </div>
             </div>
-                <Button name="reset" onButtonClick={resetResult} />            
+            <Button name="Reset Results" onButtonClick={resetResults} />
         </div>
-
-
-    )
+    );
 }
 
 export default Feedback;
