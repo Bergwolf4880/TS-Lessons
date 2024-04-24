@@ -7,10 +7,10 @@ function Counter(){
 const [count, setCount ]= useState<number>(1);
 
 
-const onMinus = () =>{
+const onMinus = ():void =>{
     setCount((prevValue)=> prevValue -1);
 }
-const onPlus = () =>{ 
+const onPlus = ():void =>{ 
     setCount((prevValue)=> prevValue +1);
 }
     return (

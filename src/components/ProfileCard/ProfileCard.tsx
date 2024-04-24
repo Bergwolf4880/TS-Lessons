@@ -1,0 +1,28 @@
+import "./styles.css"
+import { User } from "./types";
+
+
+function ProfileCard() {
+  const userData: User = {
+    avatar:
+      "https://img.freepik.com/premium-vector/men-women-different-poses-sitting-standing-isolated-white-background-cute-flat-style-vector-illustration_71599-9116.jpg?w=740",
+    userName: "John Doe",
+    occupation: "Web Developer",
+    hobbies: ["Reading", "Traveling", "Photography"],
+  };
+
+  return (
+    <div className="profile-card-wrapper">
+      <img src={userData.avatar} />
+      <h3>{userData.userName}</h3>
+      <p>
+        <span className="property-name">Occupation:</span> {userData.occupation}
+      </p>
+      <p>
+        <span className="property-name">Hobby:</span> {userData.hobbies[0]}
+      </p>
+    </div>
+  );
+}
+
+export default ProfileCard;
