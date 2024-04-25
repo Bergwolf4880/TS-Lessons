@@ -1,5 +1,5 @@
-import "./styles.css";
-import { AnimalCardProps } from "./types";
+import './styles.css';
+import { AnimalCardProps } from './types';
 
 function AnimalCard({ animalData }: AnimalCardProps) {
   return (

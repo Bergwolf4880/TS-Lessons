@@ -5,3 +5,4 @@ export interface FeedbackProps {
     addDislike: () => void,
     resetResults: () => void
 }
+
