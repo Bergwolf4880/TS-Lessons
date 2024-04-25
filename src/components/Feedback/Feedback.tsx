@@ -2,7 +2,7 @@ import { FeedbackProps } from "./types";
 import "./styles.css";
 import Button from "components/Button/Button";
 
-function Feedback({ like, dislike, addLike, addDislike, resetResults }: FeedbackProps) {
+function Feedback({ like=0, dislike=0, addLike, addDislike, resetResults }: FeedbackProps) {
 
     return (
         <div className="feedback-container">
@@ -18,7 +18,7 @@ function Feedback({ like, dislike, addLike, addDislike, resetResults }: Feedback
             </div>
             <Button name="Reset Results" onButtonClick={resetResults} />
         </div>
-    );
+    )
 }
 
 export default Feedback;
