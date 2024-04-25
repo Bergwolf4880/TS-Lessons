@@ -7,10 +7,14 @@ import Lesson08 from 'lessons/Lesson08/Lesson08';
 import ProfileCard from './components/ProfileCard/ProfileCard';
 import Homework07 from 'homeworks/Homework07/Homework07';
 //Consultation
+import Button from 'components/Button/Button';
 
 function App() {
   return (
     <div className="App">
+
+      <Button name="Lol" type="submit" disabled={true} onButtonClick={() => alert()} />
+      
       <Lesson08 />
       {/* <Homework07 />
       <Homework07/> */}

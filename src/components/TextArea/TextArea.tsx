@@ -1,15 +1,11 @@
-import "./styles.css";
-import { TextAreaProps } from "./types";
+import { TextArea, TextAreaContainer } from './styles';
 
-function TextArea({ label, name, placeholder }:TextAreaProps) {
-
-    return (
-        <div className="text-area-container">
-            <label>{label}</label>
-            <textarea name={name} placeholder={placeholder}></textarea>
-        </div>
-    )
+function TextAreaComponent() {
+  return (
+    <TextAreaContainer>
+      <TextArea />
+    </TextAreaContainer>
+  );
 }
 
-export default TextArea;
-
+export default TextAreaComponent;
