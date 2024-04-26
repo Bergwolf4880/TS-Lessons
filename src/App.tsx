@@ -17,10 +17,10 @@ function App() {
      <Homework08></Homework08>
       
       <Lesson08 />
-      {/* <Homework07 />
-      <Homework07/> */}
+      {/* <Homework07 /> */}
+      {/* <Homework07 /> */}
       {/* <Lesson07/> */}
-      {/* <Lesson06/>*/}
+      {/* <Lesson06/> */}
     </div>
   );
 }         

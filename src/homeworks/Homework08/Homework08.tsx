@@ -1,11 +1,11 @@
 import Button from 'components/Button/Button';
-
+import { ButtonContainer } from './styles';
 function Homework08() {
   return (
-    <div>
-      <Button name="Button True" disabled={false}></Button>
-      <Button name="Button False"></Button>
-    </div>
+    <ButtonContainer>
+      <Button name="Button True"></Button>
+      <Button name="Button False" disabled></Button>
+    </ButtonContainer>
   );
 }
 
