@@ -32,3 +32,6 @@ export const AvatarImage = styled.img`
 export const UserNameHeader = styled.h3`
   font-size: 28px;
 `;
+export const Paragraph = styled.p`
+
+`

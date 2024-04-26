@@ -4,7 +4,7 @@ import { ButtonProps } from './types';
 function Button({
   name,
   type = 'button',
-  disabled = false,
+  disabled = true,
   onButtonClick,
 }: ButtonProps) {
   

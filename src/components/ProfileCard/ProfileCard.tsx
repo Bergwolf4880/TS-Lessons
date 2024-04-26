@@ -5,6 +5,7 @@ import {
   AvatarImage,
   UserNameHeader,
   User,
+  Paragraph,
 } from './types';
 
 function ProfileCard() {
@@ -20,12 +21,12 @@ function ProfileCard() {
     <ProfileCardContainer>
       <AvatarImage src="{userData.avatar}" />
       <UserNameHeader>{userData.userName}</UserNameHeader>
-      <p>
+      <Paragraph>
         <PropertyName>Occupation:{userData.occupation}</PropertyName>
-      </p>
-      <p>
+      </Paragraph>
+      <Paragraph>
         <PropertyName>Hobby:{userData.hobbies[0]}</PropertyName>
-      </p>
+      </Paragraph>
     </ProfileCardContainer>
   );
 }

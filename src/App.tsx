@@ -6,14 +6,15 @@ import Lesson08 from 'lessons/Lesson08/Lesson08';
 //HW
 import ProfileCard from './components/ProfileCard/ProfileCard';
 import Homework07 from 'homeworks/Homework07/Homework07';
+import Homework08 from 'homeworks/Homework08/Homework08';
 //Consultation
-import Button from 'components/Button/Button';
+
 
 function App() {
   return (
     <div className="App">
 
-      <Button name="Lol" type="submit" disabled={true} onButtonClick={() => alert()} />
+     <Homework08></Homework08>
       
       <Lesson08 />
       {/* <Homework07 />

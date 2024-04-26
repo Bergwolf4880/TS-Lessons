@@ -1,16 +1,10 @@
 import styled from '@emotion/styled';
 
-type buttonType = 'button' | 'submit' | 'reset' | undefined;
-
-export interface ButtonProps {
-  name?: string;
-  type?: buttonType;
-  disabled?: boolean;
-  onButtonClick?: () => void;
+interface ButtonComponentProps {
+  disabled: boolean
 }
 
-
-export const ButtonComponent = styled.button<ButtonProps>`
+export const ButtonComponent = styled.button<ButtonComponentProps>`
   width: 100%;
   height: 70px;
   outline: none;
