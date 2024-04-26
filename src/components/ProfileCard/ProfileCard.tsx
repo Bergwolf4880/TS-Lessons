@@ -1,27 +1,33 @@
-import "./styles.css"
-import { User } from "./types";
-
+import './styles.css';
+import {
+  ProfileCardContainer,
+  PropertyName,
+  AvatarImage,
+  UserNameHeader,
+  User,
+  Paragraph,
+} from './types';
 
 function ProfileCard() {
   const userData: User = {
     avatar:
-      "https://img.freepik.com/premium-vector/men-women-different-poses-sitting-standing-isolated-white-background-cute-flat-style-vector-illustration_71599-9116.jpg?w=740",
-    userName: "John Doe",
-    occupation: "Web Developer",
-    hobbies: ["Reading", "Traveling", "Photography"],
+      'https://img.freepik.com/premium-vector/men-women-different-poses-sitting-standing-isolated-white-background-cute-flat-style-vector-illustration_71599-9116.jpg?w=740',
+    userName: 'John Doe',
+    occupation: 'Web Developer',
+    hobbies: ['Reading', 'Traveling', 'Photography'],
   };
 
   return (
-    <div className="profile-card-wrapper">
-      <img src={userData.avatar} />
-      <h3>{userData.userName}</h3>
-      <p>
-        <span className="property-name">Occupation:</span> {userData.occupation}
-      </p>
-      <p>
-        <span className="property-name">Hobby:</span> {userData.hobbies[0]}
-      </p>
-    </div>
+    <ProfileCardContainer>
+      <AvatarImage src="{userData.avatar}" />
+      <UserNameHeader>{userData.userName}</UserNameHeader>
+      <Paragraph>
+        <PropertyName>Occupation:{userData.occupation}</PropertyName>
+      </Paragraph>
+      <Paragraph>
+        <PropertyName>Hobby:{userData.hobbies[0]}</PropertyName>
+      </Paragraph>
+    </ProfileCardContainer>
   );
 }
 

@@ -8,7 +8,7 @@ import {
 function Lesson08() {
   //   const styleObject = {
   //     fontSize: '42px',
-  //     color: 'red',
+  //     color: 'red',+
   //   };
 
   return (

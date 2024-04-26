@@ -6,11 +6,16 @@ import Lesson08 from 'lessons/Lesson08/Lesson08';
 //HW
 import ProfileCard from './components/ProfileCard/ProfileCard';
 import Homework07 from 'homeworks/Homework07/Homework07';
+import Homework08 from 'homeworks/Homework08/Homework08';
 //Consultation
+
 
 function App() {
   return (
     <div className="App">
+
+     <Homework08></Homework08>
+      
       <Lesson08 />
       {/* <Homework07 />
       <Homework07/> */}
