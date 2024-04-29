@@ -13,6 +13,9 @@ function Homework09() {
   const [inputValue, setInputValue] = useState<string>('');
   const [inputValue2, setInputValue2] = useState<string>('');
 
+  const [firstField, setFirstField] = useState<string>('');
+  const [secondField, setSecondField] = useState<string>('');
+
   const onChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
   };
@@ -20,9 +23,6 @@ function Homework09() {
   const onChangeInput2 = (event: ChangeEvent<HTMLInputElement>) => {
     setInputValue2(event.target.value);
   };
-
-  const [firstField, setFirstField] = useState<string>('');
-  const [secondField, setSecondField] = useState<string>('');
 
   function showInputValues() {
     setFirstField(inputValue);
@@ -44,12 +44,12 @@ function Homework09() {
         onInputChange={onChangeInput2}
       />
       <OutputContainer>
-      <Paragraph>First field output:</Paragraph>
-      <OutputField>{firstField}</OutputField>
+        <Paragraph>First field output:</Paragraph>
+        <OutputField>{firstField}</OutputField>
       </OutputContainer>
       <OutputContainer>
-      <Paragraph>Second field output:</Paragraph>
-      <OutputField>{secondField}</OutputField>
+        <Paragraph>Second field output:</Paragraph>
+        <OutputField>{secondField}</OutputField>
       </OutputContainer>
 
       <Button
