@@ -9,7 +9,7 @@ import Lesson09 from 'lessons/Lesson09/Lesson09';
 // import Homework07 from 'homeworks/Homework07/Homework07';
 // import Homework08 from 'homeworks/Homework08/Homework08';
 import Homework09 from 'homeworks/Homework09/Homework09';
-import CWHW09 from 'homeworks/Homework09/CWHW09';
+// import CWHW09 from 'homeworks/Homework09/CWHW09';
 //Consultation
 
 function App() {
@@ -18,8 +18,8 @@ function App() {
       <GlobalStyles />
 
       {/* <Homework09 /> */}
-      <CWHW09/>
-      {/* <Lesson09 /> */}
+      {/* <CWHW09/> */}
+      <Lesson09 />
       {/* <Lesson08 /> */}
       {/* <Homework07 /> */}
       {/* <Homework07 /> */}
