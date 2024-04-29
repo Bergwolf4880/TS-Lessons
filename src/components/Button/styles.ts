@@ -6,17 +6,24 @@ interface ButtonComponentProps {
 
 export const ButtonComponent = styled.button<ButtonComponentProps>`
   width: 100%;
-  height: 70px;
+  height: auto;
   outline: none;
   border: none;
   border-radius: 4px;
   padding: 20px;
-  background: ${({disabled}) => (disabled ? '#DBDED5': '#adba4e')};
-  color: 2f2c2f;
-  font-size: 28px;
+  /* background: ${({ disabled }) => (disabled ? '#DBDED5' : '#adba4e')}; */
+  background: rgb(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   cursor: pointer;
   justify-content: center;
+  opacity: 0.4;
+  transition: ease-out 0.5s ;
+  &:hover{
+    opacity: 1;
+    transition: ease-in 0.2s ;
+  }
 `
 
