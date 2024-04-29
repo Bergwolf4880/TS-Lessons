@@ -9,20 +9,26 @@ export const InputComponentContainer = styled.div`
 `;
 
 export const InputComponentLabel = styled.label`
-  font-size: 16px;
-  color: #6f6f6f;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  height: 30px;
+  color: #adba4e;
 `;
 
 export const InputComponent = styled.input`
   width: 100%;
-  height: 50px;
+  height: auto;
   padding: 12px;
   outline: none;
-  border: 1px solid black;
+  border: 2px solid #adba4e;
   border-radius: 4px;
-  font-size: 16px;
+  background-color: slategray;
+  font-size: 24px;
+  color: #adba4e;
 
   &::placeholder {
-    color: #6f6f6f;
+    color: #adba4e;
+    opacity: 0.8;
   }
 `;
