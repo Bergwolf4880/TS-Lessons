@@ -47,11 +47,13 @@ function Lesson09() {
   return (
     <Lesson09Component>
       <InputExamples
+        value={inputValue}
         name="example"
         placeholder="example text"
         onChange={onChangeInput}
       />
       <InputExamples
+        value={inputValue2}
         name="example"
         placeholder="example text"
         onChange={onChangeInput2}
