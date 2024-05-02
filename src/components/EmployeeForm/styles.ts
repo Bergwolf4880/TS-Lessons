@@ -16,14 +16,15 @@ export const EmployeeFormContainer = styled.form`
 export const CheckboxContainer = styled.div`
 display: flex;
 align-items: center;
-justify-content: center;
-
-
-
+justify-content: space-between;
 `
-export const Paragraph = styled.p`
+export const CheckboxLabel = styled.label`
 font-family: Arial, Helvetica, sans-serif;
 font-weight: 400;
 font-size: 24px;
 color: #243f2b;
+`
+export const Checkbox = styled.input`
+width: 25px;
+height: 25px;
 `

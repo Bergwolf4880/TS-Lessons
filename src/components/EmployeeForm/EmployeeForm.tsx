@@ -1,26 +1,28 @@
 import Input from 'components/Input/Input';
 import Button from 'components/Button/Button';
 import { useFormik } from 'formik';
-import { EmployeeFormContainer, CheckboxContainer, Paragraph } from './styles';
+import {
+  EmployeeFormContainer,
+  CheckboxContainer,
+  CheckboxLabel,
+  Checkbox,
+} from './styles';
 import { EmployeeFormValues } from './types';
-import { useState } from 'react';
 
 export const EmloyeeForm = () => {
-  const [isAgreed, setIsAgreed] = useState(true);
-
   const formik = useFormik({
     initialValues: {
       firstName: '',
       secondName: '',
-      age:  '',
+      age: '',
       position: '',
       agreement: false,
     } as EmployeeFormValues,
     onSubmit: (values: EmployeeFormValues) => {
-      console.log('values', values);
+      console.table(values);
     },
   });
-  
+
   return (
     <EmployeeFormContainer onSubmit={formik.handleSubmit}>
       <Input
@@ -55,16 +57,16 @@ export const EmloyeeForm = () => {
         value={formik.values.age}
       />
       <CheckboxContainer>
-      <Paragraph>Terms and Conditions</Paragraph>
-        <Input
+        <CheckboxLabel htmlFor="agreement_id">Terms and Conditions</CheckboxLabel>
+        <Checkbox
+          id="agreement_id"
           name="agreement"
           type="checkbox"
-          onInputChange={formik.handleChange}
+          onChange={formik.handleChange}
           checked={formik.values.agreement}
-          onInputBlur={() => setIsAgreed(false)}
-        />
+        ></Checkbox>
       </CheckboxContainer>
-      <Button name="Create" type="submit" disabled={isAgreed} />
+      <Button name="Create" type="submit" disabled={!formik.values.agreement} />
     </EmployeeFormContainer>
   );
 };
