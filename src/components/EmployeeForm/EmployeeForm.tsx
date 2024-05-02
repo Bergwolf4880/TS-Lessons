@@ -20,10 +20,10 @@ const schema = Yup.object().shape({
     .required('Surname required')
     .max(15, 'Surname too long'),
   [EMPLOYEE_FORM_NAMES.POSITION]: Yup.string().max(30, 'Too many characters'),
-  [EMPLOYEE_FORM_NAMES.AGE]: Yup.string()
+  [EMPLOYEE_FORM_NAMES.AGE]: Yup.number()
     .required('Please enter yourr age')
     .min(1, 'I am waiting...')
-    .max(3, 'Are you sure?'),  
+    .max(999, 'Are you sure?'),  
   [EMPLOYEE_FORM_NAMES.AGREEMENT]:Yup.boolean()
 });
 
