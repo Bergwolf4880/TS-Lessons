@@ -12,6 +12,8 @@ function Input({
   placeholder,
   onInputChange,
   value,
+  checked,
+  onInputBlur
 }: InputProps) {
   return (
     <InputComponentContainer>
@@ -22,9 +24,12 @@ function Input({
         placeholder={placeholder}
         onChange={onInputChange}
         value={value}
+        checked={checked}
+        onBlur={onInputBlur}
       />
     </InputComponentContainer>
   );
 }
 
 export default Input;
+

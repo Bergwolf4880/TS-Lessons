@@ -11,8 +11,8 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   border: none;
   border-radius: 4px;
   padding: 20px;
-  background: ${({ disabled }) => (disabled ? '#DBDED5' : 'red')};
-  background: rgb(255, 255, 255, 0.3);
+  background: ${({ disabled }) => (disabled ? '#DBDED5' :
+  'rgb(255, 255, 255, 0.3)')};
   backdrop-filter: blur(10px);
   font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
@@ -20,7 +20,7 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   cursor: pointer;
   justify-content: center;
   opacity: 0.4;
-  transition: ease-out 0.5s ;
+  transition: ease-out 0.2s ;
   &:hover{
     opacity: 1;
     transition: ease-in 0.2s ;

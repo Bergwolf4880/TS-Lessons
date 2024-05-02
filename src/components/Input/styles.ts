@@ -13,7 +13,7 @@ export const InputComponentLabel = styled.label`
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   height: 30px;
-  color: #adba4e;
+  color: #243f2b;
 `;
 
 export const InputComponent = styled.input`
@@ -21,14 +21,16 @@ export const InputComponent = styled.input`
   height: auto;
   padding: 12px;
   outline: none;
-  border: 2px solid #adba4e;
-  border-radius: 4px;
-  background-color: slategray;
+  border: none;
+  border-radius: 5px 20px;
+  background-color: #3c5531;
   font-size: 24px;
   color: #adba4e;
-
+  
   &::placeholder {
-    color: #adba4e;
+    color: #243f2b;
     opacity: 0.8;
   }
 `;
+
+
