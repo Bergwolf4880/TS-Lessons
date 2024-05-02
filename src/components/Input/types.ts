@@ -9,5 +9,5 @@ export interface InputProps {
   onInputChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   checked?: boolean;
   value?: string | number;
-  onInputBlur?: (event: ChangeEvent<HTMLInputElement>) => void;
-}
+  error?: string | undefined
+};

@@ -32,5 +32,9 @@ export const InputComponent = styled.input`
     opacity: 0.8;
   }
 `;
-
+export const ErrorMessage = styled.p`
+color:red;
+font-size: 16px;
+height:18px;
+`
 

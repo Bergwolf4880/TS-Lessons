@@ -2,6 +2,7 @@ import {
   InputComponentContainer,
   InputComponentLabel,
   InputComponent,
+  ErrorMessage
 } from './styles';
 import { InputProps } from './types';
 
@@ -13,8 +14,8 @@ function Input({
   onInputChange,
   value,
   checked,
-  onInputBlur
-}: InputProps) {
+  error
+ }: InputProps) {
   return (
     <InputComponentContainer>
       <InputComponentLabel>{label}</InputComponentLabel>
@@ -25,8 +26,8 @@ function Input({
         onChange={onInputChange}
         value={value}
         checked={checked}
-        onBlur={onInputBlur}
       />
+      <ErrorMessage>{error}</ErrorMessage>
     </InputComponentContainer>
   );
 }
