@@ -16,7 +16,7 @@ export const EmployeeFormContainer = styled.form`
 export const CheckboxContainer = styled.div`
 display: flex;
 align-items: center;
-justify-content: space-between;
+gap: 40px;
 `
 export const CheckboxLabel = styled.label`
 font-family: Arial, Helvetica, sans-serif;

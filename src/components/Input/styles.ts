@@ -33,4 +33,14 @@ export const InputComponent = styled.input`
   }
 `;
 
+export const ErrorMessage = styled.p`
+color:#e11452;
+font-size: 16px;
+height:18px;
+@keyframes blink {
+  50% { opacity: 0; }
+}
+animation: blink 1s infinite;
+
+`
 
