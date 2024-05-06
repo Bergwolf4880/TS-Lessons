@@ -27,8 +27,7 @@ const globalStyles = css`
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    align-items: center;
-  }
+    }
 `;
 function GlobalStyles() {
   return <Global styles={globalStyles} />;
