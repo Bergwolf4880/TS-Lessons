@@ -1,6 +1,11 @@
+import { useNavigate } from 'react-router-dom'
 import { StyledNavLink, ClientsContainer, TextFielsStyled } from '../styles';
 
 function Microsoft() {
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1)
+  }
   return (
     <ClientsContainer>
       <TextFielsStyled>

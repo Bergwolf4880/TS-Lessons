@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import {
   Footer,
   Header,
@@ -10,16 +11,19 @@ import {
 } from './styles';
 import { LayoutProps } from './types';
 
-const setActive  = ({isActive}: any) => ({ textDecoration: isActive ? 'underline' : 'none' })
+const setActive = ({ isActive }: any) => ({ textDecoration: isActive ? 'underline' : 'none' })
+
 
 function Layout({ children }: LayoutProps) {
+
+  
   return (
     <LayoutComponent>
       <Header>
         <HeaderLogoContainer>
-          <StyledNavLink to='/'>
+          <Link to='/'>
           <HeaderLogo />
-          </StyledNavLink>
+          </Link>
         </HeaderLogoContainer>
         <NavContainer>
           <StyledNavLink

@@ -1,7 +1,3 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Microsoft from './Microsoft/MIcrosoft';
-import Google from './Google/Google';
-import Apple from './Apple/Apple';
 import { StyledNavLink, ClientsContainer } from './styles';
 
 function Clients() {
@@ -9,15 +5,15 @@ function Clients() {
     <ClientsContainer>
       <>Clients</>
       <StyledNavLink
-        to="/clients/apple">
+        to="apple">
         Apple
           </StyledNavLink>
           <StyledNavLink
-        to="/clients/microsoft" >
+        to="microsoft" >
         Microsoft
           </StyledNavLink>
           <StyledNavLink
-        to="/clients/google">
+        to="google">
        Google
       </StyledNavLink>
     </ClientsContainer>
