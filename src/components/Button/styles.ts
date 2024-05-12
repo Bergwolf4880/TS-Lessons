@@ -11,8 +11,9 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   border: none;
   border-radius: 4px;
   padding: 20px;
-  background: ${({ disabled }) => (disabled ? '#DBDED5' :
-  'rgb(255, 255, 255, 0.3)')};
+  background: limegreen;
+  /* background: ${({ disabled }) => (disabled ? '#DBDED5' :
+  'rgb(255, 255, 255, 0.3)')}; */
   backdrop-filter: blur(10px);
   font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
