@@ -1,21 +1,21 @@
-import { StyledNavLink, ClientsContainer } from './styles';
+import { ClientLink, ClientsContainer } from './styles';
 
 function Clients() {
   return (
     <ClientsContainer>
       <>Clients</>
-      <StyledNavLink
+      <ClientLink
         to="apple">
         Apple
-          </StyledNavLink>
-          <StyledNavLink
+          </ClientLink>
+          <ClientLink
         to="microsoft" >
         Microsoft
-          </StyledNavLink>
-          <StyledNavLink
+          </ClientLink>
+          <ClientLink
         to="google">
        Google
-      </StyledNavLink>
+      </ClientLink>
     </ClientsContainer>
   );
 }

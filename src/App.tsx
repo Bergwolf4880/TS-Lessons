@@ -13,10 +13,10 @@ import About from 'pages/About/About';
 import Home from 'pages/Home/Home';
 import Users from 'pages/Users/Users';
 import Clients from 'pages/Clients/Clients';
-import Microsoft from 'pages/Clients/Microsoft/MIcrosoft';
-import Apple from 'pages/Clients/Apple/Apple';
-import Google from 'pages/Clients/Google/Google';
-import Lesson14 from 'lessons/Lesson14/Lesson14'
+import Microsoft from 'pages/Clients/components/Microsoft/MIcrosoft';
+import Apple from 'pages/Clients/components/Apple/Apple';
+import Google from 'pages/Clients/components/Google/Google';
+import Lesson14 from 'lessons/Lesson14/Lesson14';
 
 //HW
 // import ProfileCard from './components/ProfileCard/ProfileCard';
@@ -33,7 +33,7 @@ function App() {
     <BrowserRouter>
       <GlobalStyles />
       {/* Homework & Lesson 13 */}
-      {/* <Layout>
+      <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -44,8 +44,8 @@ function App() {
           <Route path="/clients/apple" element={<Apple />} />
           <Route path="*" element="Page not found" />
         </Routes>
-      </Layout> */}
-      <Lesson14 />
+      </Layout>
+      {/* <Lesson14 /> */}
       {/* <Lesson12 /> */}
       {/* <Homework11 /> */}
       {/* <Lesson11 /> */}
