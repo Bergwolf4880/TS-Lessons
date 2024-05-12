@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {
   Footer,
   Header,
@@ -15,15 +15,13 @@ const setActive = ({ isActive }: any) => ({ textDecoration: isActive ? 'underlin
 
 
 function Layout({ children }: LayoutProps) {
-
+  const navigate = useNavigate();
   
   return (
     <LayoutComponent>
       <Header>
-        <HeaderLogoContainer>
-          <Link to='/'>
+        <HeaderLogoContainer onClick={() => navigate('/')}>
           <HeaderLogo />
-          </Link>
         </HeaderLogoContainer>
         <NavContainer>
           <StyledNavLink
