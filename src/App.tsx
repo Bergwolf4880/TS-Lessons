@@ -25,7 +25,7 @@ function App() {
       <GlobalStyles />
       {/* <Layout /> */}
       {/* <Lesson12 /> */}
-      <Homework11 />
+      {/* <Homework11 /> */}
       {/* <Lesson11 /> */}
       {/* <Lesson10 /> */}
       {/* <Homework09 /> */}
