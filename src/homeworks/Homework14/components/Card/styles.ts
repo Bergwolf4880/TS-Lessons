@@ -8,10 +8,12 @@ height: 200px;
 font-size: 24px;
 border: solid 1px black;
 padding: 20px;
+background-color: black;
 
 `
 export const NameContainer = styled.div`
 font-family: Arial, Helvetica, sans-serif;
 font-size: 28px;
+color: limegreen;
 
 `

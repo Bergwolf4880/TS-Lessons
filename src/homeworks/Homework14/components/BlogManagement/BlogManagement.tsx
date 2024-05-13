@@ -2,13 +2,14 @@ import { createContext, useState } from 'react';
 import { BlogManagementComponent, TextArea } from './styles';
 import Button from 'components/Button/Button';
 import { MessageType } from './types';
+import Card from '../Card/Card'
 
 export const MessageContext = createContext({
   userInput: '',
 });
 
 function BlogManagement() {
-  const [message, setMessage] = useState({
+  const [message, setMessage] = useState<MessageType>({
     userInput: '',
   });
   
@@ -18,9 +19,14 @@ function BlogManagement() {
   
   const handlePost = () => {
     setPostedMessage(message);
+    setMessage({ userInput: '' })
+    isVisible()
   };
-  console.log('message.userInput', message.userInput)
-  console.log('postedMessage.userInput',postedMessage.userInput)
+
+  function isVisible() {
+  return (message.userInput.length > 0 ? 'true':'false')
+}
+
   return (
     <MessageContext.Provider value={postedMessage}>
       <BlogManagementComponent>
@@ -31,10 +37,12 @@ function BlogManagement() {
         <Button
           name="Post"
           onButtonClick={handlePost}
-        />
+        />        
       </BlogManagementComponent>
+      {postedMessage.userInput && <Card />}
     </MessageContext.Provider>
   );
 }
 
-export default BlogManagement;
+export default BlogManagement
+

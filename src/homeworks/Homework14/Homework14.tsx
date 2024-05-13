@@ -6,7 +6,6 @@ function Homework14() {
   return (
     <HomeworkWrapper>
       <BlogManagement />
-      <Card></Card>
     </HomeworkWrapper>
   );
 }

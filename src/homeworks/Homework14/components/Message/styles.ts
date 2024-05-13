@@ -5,8 +5,10 @@ font-size: 28px;
 font-family: Arial, Helvetica, sans-serif;
 border: solid 1px black;
 height:100%;
+background-color: slategray;
 `
 export const DataItem = styled.div`
- font-size: 20px;
- color: #E87641;
-`
+ font-size: 30px;
+ color: black;
+ padding: 10px;
+ `

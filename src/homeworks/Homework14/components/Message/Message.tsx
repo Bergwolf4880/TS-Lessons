@@ -4,8 +4,7 @@ import { MessageContext } from '../BlogManagement/BlogManagement';
 
 function Message() {
   const postedMessage = useContext(MessageContext);
-  console.log('msg' + postedMessage.userInput);
-  return (
+   return (
     <MessageContainer>
       <DataItem>{postedMessage.userInput}</DataItem>
     </MessageContainer>
@@ -13,3 +12,4 @@ function Message() {
 }
 
 export default Message;
+
