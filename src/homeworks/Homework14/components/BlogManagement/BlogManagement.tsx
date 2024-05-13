@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useMemo, useState } from 'react';
 import { BlogManagementComponent, TextArea } from './styles';
 import Button from 'components/Button/Button';
 import { MessageType } from './types';
@@ -17,17 +17,19 @@ function BlogManagement() {
 
   const handlePost = () => {
     setPostedMessage(message);
-    setMessage('')
   };
 
+  const contextValue = useMemo(
+    () => ({
+      userInput: postedMessage,
+      onChange: setPostedMessage,
+      setMessage: setMessage,
+    }),
+    [postedMessage, setMessage],
+  );
+
   return (
-    <MessageContext.Provider
-      value={{
-        userInput: postedMessage,
-        onChange: setPostedMessage,
-        
-      }}
-    >
+    <MessageContext.Provider value={contextValue}>
       <BlogManagementComponent>
         <TextArea
           onChange={event => setMessage(event.target.value)}
