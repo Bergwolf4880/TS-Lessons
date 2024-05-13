@@ -1,9 +1,11 @@
 export interface WeatherData {
-    name: string;
-    main: {
-      temp: number;
-    };
-    weather: {
-      icon: string;
-    }[];
-  }
+  name: string;
+  main: {
+    temp: number;
+    humidity: number;
+  };
+  wind: {
+    speed: number;
+  };
+  weather: [{ icon: string }];
+}

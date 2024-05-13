@@ -35,3 +35,11 @@ export const InputContainer = styled.div`
   gap: 10px;
 
 `;
+export const SpinnerContainer = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 150px;
+  
+`;

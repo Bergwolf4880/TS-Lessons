@@ -1,15 +1,22 @@
-import { CityName, WeatherIcon, WeatherInfoComponent } from './styles';
-import { WeatherInfoProps, iconImageStyled } from './types';
+import { TextData, WeatherIcon, WeatherInfoComponent } from './styles';
+import { WeatherInfoProps } from './types';
 
+function WeatherInfo({
+  cityName,
+  temperature,
+  iconUrl,
+  humidity,
+  windSpeed,
+}: WeatherInfoProps) {
+  let tempRound = Math.round(temperature);
 
-function WeatherInfo({ cityName, temperature, iconUrl }: WeatherInfoProps) {
-  
-  let tempRound = Math.round(temperature)
-  
   return (
     <WeatherInfoComponent>
-      <CityName>{cityName}</CityName>
-      <p>Temperature: {tempRound}°C</p>
+      
+      <TextData>{tempRound}°C</TextData>
+      <TextData>{cityName}</TextData>
+      <TextData>{windSpeed}</TextData>
+      <TextData>{humidity}</TextData>
       <WeatherIcon bgUrl={iconUrl} />
     </WeatherInfoComponent>
   );

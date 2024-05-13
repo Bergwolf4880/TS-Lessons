@@ -11,9 +11,12 @@ export const WeatherInfoComponent = styled.div`
 `;
 export const WeatherIcon = styled.div<{ bgUrl: string }>`
   background-image: url(${props => props.bgUrl});
+  height: 100px;
+  width: 100px;
 `;
 
-export const CityName = styled.h1`
+
+export const TextData = styled.h1`
 padding: 30px;
 font-family: Arial, Helvetica, sans-serif;
 font-size: 35px;
