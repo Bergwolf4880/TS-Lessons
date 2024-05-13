@@ -5,14 +5,14 @@ interface ButtonComponentProps {
 }
 
 export const ButtonComponent = styled.button<ButtonComponentProps>`
-  width: 100%;
-  height: auto;
+  width: 30%;
+  height: 100%;
   outline: none;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 20px;
   background: ${({ disabled }) => (disabled ? '#DBDED5' :
-  'rgb(255, 255, 255, 0.3)')};
+  'rgb(255, 255, 255, 0.6)')};
   backdrop-filter: blur(10px);
   font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;

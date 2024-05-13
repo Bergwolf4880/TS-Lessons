@@ -7,16 +7,17 @@ import GlobalStyles from 'styles/GlobalStyles';
 // import Lesson10 from 'lessons/Lesson10/Lesson10';
 // import Lesson11 from 'lessons/Lesson11/Lesson11';
 // import Lesson12 from 'lessons/Lesson12/Lesson12'
-import Layout from 'components/Layout/Layout';
+// import Layout from 'components/Layout/Layout';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import About from 'pages/About/About';
-import Home from 'pages/Home/Home';
-import Users from 'pages/Users/Users';
-import Clients from 'pages/Clients/Clients';
-import Microsoft from 'pages/Clients/components/Microsoft/MIcrosoft';
-import Apple from 'pages/Clients/components/Apple/Apple';
-import Google from 'pages/Clients/components/Google/Google';
-import Lesson14 from 'lessons/Lesson14/Lesson14';
+import Weather from 'pages/Weather/Weather'
+// import About from 'pages/About/About';
+// import Home from 'pages/Home/Home';
+// import Users from 'pages/Users/Users';np
+// import Clients from 'pages/Clients/Clients';
+// import Microsoft from 'pages/Clients/components/Microsoft/MIcrosoft';
+// import Apple from 'pages/Clients/components/Apple/Apple';
+// import Google from 'pages/Clients/components/Google/Google';
+// import Lesson14 from 'lessons/Lesson14/Lesson14';
 
 //HW
 // import ProfileCard from './components/ProfileCard/ProfileCard';
@@ -32,8 +33,9 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
+      <Weather />
       {/* Homework & Lesson 13 */}
-      <Layout>
+      {/* <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -44,7 +46,7 @@ function App() {
           <Route path="/clients/apple" element={<Apple />} />
           <Route path="*" element="Page not found" />
         </Routes>
-      </Layout>
+      </Layout> */}
       {/* <Lesson14 /> */}
       {/* <Lesson12 /> */}
       {/* <Homework11 /> */}

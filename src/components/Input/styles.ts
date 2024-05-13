@@ -4,28 +4,29 @@ export const InputComponentContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
-  width: 100%;
+  width: 70%;
   height: fit-content;
 `;
 
 export const InputComponentLabel = styled.label`
   font-size: 24px;
+  
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
-  height: 30px;
+  height: 100%;
   color: #243f2b;
 `;
 
 export const InputComponent = styled.input`
   width: 100%;
-  height: auto;
-  padding: 12px;
+  height: 100%;
+  padding: 20px;
   outline: none;
   border: none;
-  border-radius: 5px 20px;
-  background-color: #3c5531;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255, 0.5);
   font-size: 24px;
-  color: #adba4e;
+  color: black;
   
   &::placeholder {
     color: #243f2b;
