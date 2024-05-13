@@ -1,11 +1,9 @@
+export interface WeatherInfoProps {
+    cityName: string;
+    temperature: number;
+    iconUrl: string;
+  }
 
-
-export interface WeatherInfoTypes{
-    iconProps: string,
-    cityName?: string,
-    
-}
-
-export interface iconImageStyled{
-    url: string;
+export interface iconImageStyled {
+  url: any;
 }

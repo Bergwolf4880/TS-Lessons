@@ -1,16 +1,16 @@
-import { WeatherIcon, WeatherInfoComponent } from './styles';
-import { WeatherInfoTypes } from './types';
+import { CityName, WeatherIcon, WeatherInfoComponent } from './styles';
+import { WeatherInfoProps, iconImageStyled } from './types';
 
-interface WeatherIconProps {
-  url: string;
-}
 
-function WeatherInfo({ iconProps }: WeatherInfoTypes) {
-  const iconUrl = `http://openweathermap.org/img/w/${iconProps}.png`;
-
+function WeatherInfo({ cityName, temperature, iconUrl }: WeatherInfoProps) {
+  
+  let tempRound = Math.round(temperature)
+  
   return (
     <WeatherInfoComponent>
-      <WeatherIcon url={iconUrl} /> 
+      <CityName>{cityName}</CityName>
+      <p>Temperature: {tempRound}°C</p>
+      <WeatherIcon bgUrl={iconUrl} />
     </WeatherInfoComponent>
   );
 }
