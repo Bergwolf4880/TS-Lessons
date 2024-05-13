@@ -1,15 +1,20 @@
 import { useContext } from 'react';
-import { DataItem, MessageContainer } from './styles';
+import { DataItem, DelButton, MessageContainer } from './styles';
 import { MessageContext } from '../BlogManagement/BlogManagement';
 
 function Message() {
-  const postedMessage = useContext(MessageContext);
-   return (
+  const { userInput, onChange} = useContext(MessageContext);
+
+  function deletePost() {
+    onChange('');
+  }
+
+  return (
     <MessageContainer>
-      <DataItem>{postedMessage.userInput}</DataItem>
+      <DataItem>{userInput}</DataItem>
+      <DelButton onClick={() => {}}>X</DelButton>
     </MessageContainer>
   );
 }
 
 export default Message;
-

@@ -12,3 +12,9 @@ export const DataItem = styled.div`
  color: black;
  padding: 10px;
  `
+
+export const DelButton = styled.button`
+ outline: none;
+ 
+
+ `

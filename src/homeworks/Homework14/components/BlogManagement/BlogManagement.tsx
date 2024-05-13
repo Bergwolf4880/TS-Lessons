@@ -2,42 +2,42 @@ import { createContext, useState } from 'react';
 import { BlogManagementComponent, TextArea } from './styles';
 import Button from 'components/Button/Button';
 import { MessageType } from './types';
-import Card from '../Card/Card'
+import Card from '../Card/Card';
 
 export const MessageContext = createContext({
   userInput: '',
-});
+  onChange: () => {},
+  setMessage: () => {},
+} as MessageType);
 
 function BlogManagement() {
-  const [message, setMessage] = useState<MessageType>({
-    userInput: '',
-  });
-  
-  const [postedMessage, setPostedMessage] = useState<MessageType>({
-    userInput: '',
-  });
-  
+  const [message, setMessage] = useState<string>('');
+
+  const [postedMessage, setPostedMessage] = useState<string>('');
+
   const handlePost = () => {
     setPostedMessage(message);
-    setMessage({ userInput: '' })
+    setMessage('')
   };
 
   return (
-    <MessageContext.Provider value={postedMessage}>
+    <MessageContext.Provider
+      value={{
+        userInput: postedMessage,
+        onChange: setPostedMessage,
+        
+      }}
+    >
       <BlogManagementComponent>
         <TextArea
-          onChange={event => setMessage({ userInput: event.target.value })}
-          value={message.userInput}
+          onChange={event => setMessage(event.target.value)}
+          value={message}
         />
-        <Button
-          name="Post"
-          onButtonClick={handlePost}
-        />        
+        <Button name="Post" onButtonClick={handlePost} />
       </BlogManagementComponent>
-      {postedMessage.userInput && <Card />}
+      {postedMessage && <Card />}
     </MessageContext.Provider>
   );
 }
 
-export default BlogManagement
-
+export default BlogManagement;
