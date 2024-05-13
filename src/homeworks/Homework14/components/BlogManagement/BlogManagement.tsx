@@ -20,12 +20,7 @@ function BlogManagement() {
   const handlePost = () => {
     setPostedMessage(message);
     setMessage({ userInput: '' })
-    isVisible()
   };
-
-  function isVisible() {
-  return (message.userInput.length > 0 ? 'true':'false')
-}
 
   return (
     <MessageContext.Provider value={postedMessage}>
