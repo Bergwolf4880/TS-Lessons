@@ -1,71 +1,89 @@
 import Input from 'components/Input/Input';
 import { API_KEY } from './keys';
 import {
-  ContentContainer,
-  HeadingText,
-  InputContainer,
-  SpinnerContainer,
-  WeatherHeader,
+  Header,
+  InputButtonWrapper,
+  Main,
+  WeatherButtonWrapper,
+  WeatherForm,
   WeatherWrapper,
 } from './styles';
 import Button from 'components/Button/Button';
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import WeatherInfo from './components/WeatherInfo/WeatherInfo';
-import { WeatherData } from './weatherTypes';
+import { WeatherData, WeatherErrorData } from './weatherTypes';
 import Spinner from 'components/Spinner/Spinner';
+import WeatherError from './components/WeatherError/WeatherError';
 
 function Weather() {
-  const [location, setCity] = useState('');
-  const [weatherData, setWeatherData] = useState<WeatherData>();
-  const [isFactsLoaded, setIsFactsLoaded] = useState<boolean>(false);
+  const [city, setCity] = useState('');
+  const [weatherData, setWeatherData] = useState<WeatherData | undefined>(
+    undefined,
+  );
+  const [weatherError, setWeatherError] = useState<
+    WeatherErrorData | undefined
+  >(undefined);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const serverWork = async () => {
-    try {
-      setIsFactsLoaded(true);
-      const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&&units=metric`,
-      );
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const body = await response.json();
-      setWeatherData(body);
+  const URL: string = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&&units=metric`;
 
-      console.log('body', body.name);
-    } catch (error) {
-      console.error('An error occurred');
-    } finally {
-      setIsFactsLoaded(false);
+  const getWeatherInfo = async () => {
+    if (city.trim().length === 0) {
+      return alert('Enter city name');
+    }
+    setWeatherData(undefined);
+    setWeatherError(undefined);
+    setIsLoading(true);
+
+    const response = await fetch(URL);
+    const data = await response.json();
+
+    if (response.ok) {
+      setIsLoading(false);
+      setWeatherData({
+        temp: `${data.main.temp}`,
+        icon: `http://openweathermap.org/img/w/${data.weather[0].icon}.png`,
+        cityName: `${data.name}`,
+      });
+    } else {
+      setWeatherError({
+        code: data?.cod,
+        message: data?.message,
+      });
     }
   };
 
-  console.log('weatherData', weatherData);
-  const buttonHandler = () => {
-    serverWork();
+  const onCityChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setCity(event.target.value);
   };
 
   return (
     <WeatherWrapper>
-      <WeatherHeader>
-        <HeadingText>Weather App</HeadingText>
-      </WeatherHeader>
-      <SpinnerContainer>{isFactsLoaded ? <Spinner /> : ''}</SpinnerContainer>
-      <InputContainer>
-        <Input onInputChange={event => setCity(event.target.value)} />
-        <Button name="Search" onButtonClick={buttonHandler} />
-      </InputContainer>
-
-      <ContentContainer>
-        {weatherData && (
-          <WeatherInfo
-            cityName={weatherData.name}
-            temperature={weatherData.main.temp} 
-            iconUrl={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`}
-            humidity={weatherData.main.humidity}
-            windSpeed={weatherData.wind.speed}
-          />
-        )}
-      </ContentContainer>
+      <Header>Weather App</Header>
+      <Main>
+        <WeatherForm>
+          <InputButtonWrapper>
+            <Input
+              placeholder="Enter city name"
+              onInputChange={onCityChange}
+              value={city}
+              name="city"
+            />
+            <WeatherButtonWrapper>
+              <Button name="Search" onButtonClick={getWeatherInfo} />
+            </WeatherButtonWrapper>
+          </InputButtonWrapper>
+          {isLoading && <Spinner />}
+          {!!weatherData && (
+            <WeatherInfo
+              temp={weatherData?.temp}
+              icon={weatherData?.icon}
+              cityName={weatherData?.cityName}
+            />
+          )}
+          {!!weatherError && <WeatherError error={weatherError} />}
+        </WeatherForm>
+      </Main>
     </WeatherWrapper>
   );
 }

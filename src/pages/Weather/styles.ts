@@ -1,45 +1,57 @@
-import styled from '@emotion/styled';
-import { WeatherBack } from 'assets';
+import styled from "@emotion/styled";
+
+import { WeatherBack } from "assets";
 
 export const WeatherWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   flex: 1;
-  background-image: url(${WeatherBack});
-  gap: 20px;
+  background: url(${WeatherBack});
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
-export const WeatherHeader = styled.header`
+
+export const Header = styled.header`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
   width: 100%;
-  border: solid 1px white;
-  background-color: rgba(18, 45, 77, 0.6);
-  backdrop-filter: blur(10px);
-`;
-export const HeadingText = styled.p`
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding: 25px 85px;
+  border-bottom: 1px #d2d2d2 solid;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    rgba(18, 45, 77, 0.5);
+  backdrop-filter: blur(8px);
   font-size: 24px;
-  opacity: 1;
+  font-weight: bold;
   color: white;
 `;
-export const ContentContainer = styled.div`
-  display: flex;
-`;
-export const InputContainer = styled.div`
-  display: flex;
-  width: 750px;
-  gap: 10px;
 
-`;
-export const SpinnerContainer = styled.div`
-  align-items: center;
+export const Main = styled.main`
   display: flex;
+  flex: 1;
   justify-content: center;
-  height: 50px;
-  width: 150px;
-  
+`;
+
+export const WeatherForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 709px;
+  gap: 60px;
+  margin-top: 140px;
+`;
+
+export const InputButtonWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  gap: 12px;
+`;
+
+export const WeatherButtonWrapper = styled.div`
+  width: 146px;
 `;
