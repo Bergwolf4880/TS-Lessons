@@ -9,10 +9,10 @@ import GlobalStyles from 'styles/GlobalStyles';
 // import Lesson12 from 'lessons/Lesson12/Lesson12'
 // import Layout from 'components/Layout/Layout';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Homework14 from 'homeworks/Homework14/Homework14'
+import Weather from 'pages/Weather/Weather'
 // import About from 'pages/About/About';
 // import Home from 'pages/Home/Home';
-// import Users from 'pages/Users/Users';
+// import Users from 'pages/Users/Users';np
 // import Clients from 'pages/Clients/Clients';
 // import Microsoft from 'pages/Clients/components/Microsoft/MIcrosoft';
 // import Apple from 'pages/Clients/components/Apple/Apple';
@@ -33,7 +33,7 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <Homework14 />
+      <Weather />
       {/* Homework & Lesson 13 */}
       {/* <Layout>
         <Routes>

@@ -1,6 +1,5 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 import { Lesson09Component, InputExamples, Result } from './styles';
-import { log } from 'console';
 
 function Lesson09() {
   const [inputValue, setInputValue] = useState<string>('');

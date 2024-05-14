@@ -18,7 +18,7 @@ function Input({
  }: InputProps) {
   return (
     <InputComponentContainer>
-      <InputComponentLabel>{label}</InputComponentLabel>
+      {/* <InputComponentLabel>{label}</InputComponentLabel> */}
       <InputComponent
         name={name}
         type={type}
